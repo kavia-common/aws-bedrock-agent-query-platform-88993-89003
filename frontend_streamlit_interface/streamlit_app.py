@@ -407,11 +407,17 @@ def main():
     _apply_ocean_theme()
     _init_session_state()
 
+    # Display requested developer message prominently
+    st.info("Edit src/App.js and save to reload.")
+
     # First-time discovery
     if not st.session_state.api_discovery:
         st.session_state.api_discovery = discover_api()
     if not st.session_state.agents:
         st.session_state.agents = fetch_agents(st.session_state.api_discovery)
+
+    # Subtle badge below the info note for emphasis (non-intrusive)
+    st.markdown('<span class="ocean-badge">Developer Tip</span>', unsafe_allow_html=True)
 
     _sidebar_ui()
     _main_panel()

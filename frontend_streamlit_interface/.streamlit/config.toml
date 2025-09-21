@@ -1,12 +1,7 @@
 [theme]
-base="light"
+base="dark"
 primaryColor="#1E3A8A"
-backgroundColor="#F3F4F6"
-secondaryBackgroundColor="#FFFFFF"
-textColor="#111827"
-
-[server]
-headless = true
-port = 8501
-enableCORS = true
-"""
+backgroundColor="#111827"
+secondaryBackgroundColor="#1f2937"
+textColor="#e5e7eb"
+font="sans serif"
