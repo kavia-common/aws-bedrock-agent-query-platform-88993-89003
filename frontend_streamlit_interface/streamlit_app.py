@@ -407,8 +407,10 @@ def main():
     _apply_ocean_theme()
     _init_session_state()
 
-    # Display requested developer message prominently
-    st.info("Edit src/App.js and save to reload.")
+    # Display requested developer message prominently for Streamlit
+    # PUBLIC_INTERFACE
+    # This informs developers where to make changes for hot-reload in Streamlit.
+    st.info("Edit streamlit_app.py and save to reload.")
 
     # First-time discovery
     if not st.session_state.api_discovery:
@@ -418,6 +420,7 @@ def main():
 
     # Subtle badge below the info note for emphasis (non-intrusive)
     st.markdown('<span class="ocean-badge">Developer Tip</span>', unsafe_allow_html=True)
+    st.caption("Streamlit auto-reloads on save. Use the sidebar to refresh backend metadata.")
 
     _sidebar_ui()
     _main_panel()
