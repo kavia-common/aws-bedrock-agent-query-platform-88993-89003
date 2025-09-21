@@ -1,0 +1,4 @@
+{
+    "command": "npm install",
+    "working_directory": "/home/kavia/workspace/code-generation/aws-bedrock-agent-query-platform-88993-89003/frontend_streamlit_interface"
+}
